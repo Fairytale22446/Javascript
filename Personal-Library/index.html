@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">📚 My Personal Library</h1>
+        <button id="addBookBtn" class="btn add-btn">➕ Add Book</button>
+      </header>
+
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔍 Search by title, author or genre..."
+        />
+        <select id="filterSelect">
+          <option value="all">All Books</option>
+          <option value="read">Read</option>
+          <option value="unread">Unread</option>
+        </select>
+      </div>
+
+      <div id="bookList" class="book-grid"></div>
+    </div>
+
+    <!-- Add Book Modal -->
+    <div id="addBookModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add New Book</h2>
+        <form id="bookForm">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required />
+          </div>
+          <div class="form-group">
+            <label for="author">Author:</label>
+            <input type="text" id="author" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="genre">Genre:</label>
+            <select id="genre">
+              <option value="">Select Genre</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Sci-Fi">Science Fiction</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Romance">Course</option>
+              <option value="Horror">Horror</option>
+              <option value="Biography">Biography</option>
+              <option value="Self-Help">Self-Help</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="status">Status:</label>
+            <select id="status">
+              <option value="unread">Unread</option>
+              <option value="read">Read</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pdfUpload">Upload PDF (optional):</label>
+            <input type="file" id="pdfUpload" accept=".pdf" />
+          </div>
+          <button type="submit" class="btn submit-btn">Save Book</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfModal" class="modal">
+      <div class="modal-content pdf-viewer">
+        <span class="close">&times;</span>
+        <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

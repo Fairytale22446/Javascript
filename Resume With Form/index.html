@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="resume.css" />
+  </head>
+  <body>
+    <h2>Resume Form</h2>
+    <form id="form">
+      <h2>Personal Details</h2>
+      <hr style="margin-bottom: 20px" />
+      <div class="form-group">
+        <label class="label" for="myName">Name:</label>
+        <input class="input" type="text" id="myName" autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label class="label" for="Designation">Designation:</label>
+        <input class="input" type="text" id="Designation" autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label class="label" for="Phone">Phone Number:</label>
+        <input class="input" type="text" id="Phone" autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label class="label" for="Email">Email:</label>
+        <input class="input" type="text" id="Email" autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label class="label" for="Address">Address:</label>
+        <input class="input" type="text" id="Address" autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label class="label" for="Picture">Profile Picture</label>
+        <input class="input" type="file" id="Picture" autocomplete="off" />
+      </div>
+
+      <div>
+        <h2>Education</h2>
+        <hr style="margin-bottom: 20px" />
+
+        <div class="form-group">
+          <label class="label" for="PassingYear">Passing Year:</label>
+          <input
+            class="input"
+            type="date"
+            id="PassingYear"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="Degree">Degree:</label>
+          <input class="input" type="text" id="Degree" autocomplete="off" />
+        </div>
+
+        <div class="form-group">
+          <label class="label" for="Institute">Institute:</label>
+          <input class="input" type="text" id="Institute" autocomplete="off" />
+        </div>
+
+        <div>
+          <div class="form-group">
+            <label class="label" for="PassingYear1">Passing Year:</label>
+            <input
+              class="input"
+              type="date"
+              id="PassingYear1"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="label" for="Degree1">Degree:</label>
+            <input class="input" type="text" id="Degree1" autocomplete="off" />
+          </div>
+
+          <div class="form-group">
+            <label class="label" for="Institute1">Institute:</label>
+            <input
+              class="input"
+              type="text"
+              id="Institute1"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <h2>Skills</h2>
+        <hr style="margin-bottom: 20px" />
+
+        <div class="form-group">
+          <label class="label margin-bottom" for="Skills">Skills:</label>
+          <input
+            class="input margin-bottom"
+            type="text"
+            id="Skills1"
+            autocomplete="off"
+          />
+          <input
+            class="input margin-bottom"
+            type="text"
+            id="Skills2"
+            autocomplete="off"
+          />
+          <input
+            class="input margin-bottom"
+            type="text"
+            id="Skills3"
+            autocomplete="off"
+          />
+        </div>
+
+        <h2>Language</h2>
+        <hr style="margin-bottom: 20px" />
+
+        <div class="form-group">
+          <label class="label margin-bottom" for="Language">Language:</label>
+          <input
+            class="input margin-bottom"
+            type="text"
+            id="Language1"
+            autocomplete="off"
+          />
+          <input
+            class="input margin-bottom"
+            type="text"
+            id="Language2"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label margin-bottom" for="Achievements"
+          >Achievements</label
+        >
+        <input
+          class="input margin-bottom"
+          type="text"
+          id="Achievements1"
+          autocomplete="off"
+        />
+        <input
+          class="input margin-bottom"
+          type="text"
+          id="Achievements2"
+          autocomplete="off"
+        />
+        <input
+          class="input margin-bottom"
+          type="text"
+          id="Achievements3"
+          autocomplete="off"
+        />
+      </div>
+
+      <br />
+      <hr style="margin-bottom: 20px" />
+      <div class="btnDiv">
+        <input id="submitBtn" class="submit" type="submit" />
+      </div>
+    </form>
+
+    <!-- Resume -->
+    <h2>Resume</h2>
+    <div class="resumeDiv">
+      <header>
+        <div>
+          <h1 class="white"><span id="displayName"></span></h1>
+          <h2 class="white"><span id="displayDesignation"></span></h2>
+        </div>
+        <img  id="displayPicture" src="images.jpg" alt="" />
+      </header>
+      <div class="content">
+        <aside>
+          <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p><strong>Phone Number</strong></p>
+
+            <p><span id="displayPhone"></span></p>
+            <br />
+            <p><strong>Email</strong></p>
+
+            <p><span id="displayEmail"></span></p>
+            <br />
+            <p><strong>Address</strong></p>
+
+            <p><span id="displayAddress"></span></p>
+          </section>
+          <section id="edu" class="education">
+            <h2>Education</h2>
+            <p><span id="displayPassingYear"></span></p>
+            <p><strong><span id="displayDegree"></span></strong></p>
+            <p><span id="displayInstitute"></span></p>
+            <br />
+
+            <p><span id="displayPassingYear1"></span></p></p>
+            <p><strong><span id="displayDegree1"></span></strong></p>
+            <p><span id="displayInstitute1"></span></p>
+          </section>
+
+          <section id="skill" class="skills">
+            <h2>Skills</h2>
+            <ul>
+              <li><span id="displaySkills1"></span></li>
+              <li><span id="displaySkills2"></span></li>
+              <li><span id="displaySkills3"></span></li>
+            </ul>
+          </section>
+
+          <section id="lang" class="language">
+            <h2>Language</h2>
+           <ul>
+            <li><span id="displayLanguage1"></span></li>
+          <li><span id="displayLanguage2"></span></li>
+           </ul>
+          </section>
+        </aside>
+
+        <main class="mainContent">
+          <section id="Achievements" class="Achievements">
+            <h2>Achievements</h2>
+            <ul>
+              <li><span id="displayAchievements1"></span></li>
+              <li><span id="displayAchievements2"></span></li>
+              <li><span id="displayAchievements3"></span></li>
+            </ul>
+          </section>
+        </main>
+       </div>
+    </div>
+
+    <div class="btnDiv">
+      <button id="Print_btn" class="btn">Print</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

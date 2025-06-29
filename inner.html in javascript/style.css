@@ -1,0 +1,168 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Particle background container */
+.particles-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Each particle circle */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  background: white;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0 0 4px white;
+  animation-name: floatParticle;
+  animation-duration: 7s;
+}
+
+/* We use nth-child to assign random sizes, positions & animation delays */
+.particle:nth-child(odd) {
+  background: #ff007f;
+  width: 4px;
+  height: 4px;
+  animation-duration: 7s;
+  box-shadow: 0 0 5px #ff007f;
+}
+
+.particle:nth-child(even) {
+  background: #00ffff;
+  width: 5px;
+  height: 5px;
+  animation-duration: 9s;
+  box-shadow: 0 0 6px #00ffff;
+}
+
+/* Random positions and animation delays */
+.particle:nth-child(1)  { top: 10%; left: 20%; animation-delay: 0s; }
+.particle:nth-child(2)  { top: 25%; left: 40%; animation-delay: 1s; }
+.particle:nth-child(3)  { top: 35%; left: 70%; animation-delay: 2s; }
+.particle:nth-child(4)  { top: 60%; left: 15%; animation-delay: 3s; }
+.particle:nth-child(5)  { top: 75%; left: 50%; animation-delay: 4s; }
+.particle:nth-child(6)  { top: 80%; left: 65%; animation-delay: 5s; }
+.particle:nth-child(7)  { top: 20%; left: 85%; animation-delay: 6s; }
+.particle:nth-child(8)  { top: 40%; left: 25%; animation-delay: 7s; }
+.particle:nth-child(9)  { top: 55%; left: 35%; animation-delay: 8s; }
+.particle:nth-child(10) { top: 30%; left: 10%; animation-delay: 9s; }
+
+/* You can add more positions & delays similarly up to 50 */
+
+.particle:nth-child(11) { top: 5%;  left: 60%; animation-delay: 10s; }
+.particle:nth-child(12) { top: 90%; left: 20%; animation-delay: 11s; }
+.particle:nth-child(13) { top: 65%; left: 80%; animation-delay: 12s; }
+.particle:nth-child(14) { top: 45%; left: 90%; animation-delay: 13s; }
+.particle:nth-child(15) { top: 15%; left: 5%;  animation-delay: 14s; }
+
+
+@keyframes floatParticle {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
+/* Container and dot styling remains same */
+
+.container {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  border: 2px dashed #ffffff55;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px #ffffff33;
+}
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff;
+  animation: moveAround 6s linear infinite;
+}
+
+.dot:nth-child(1) {
+  background: #ff007f;
+  animation-delay: 0s;
+  box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+}
+
+.dot:nth-child(2) {
+  background: #00ffff;
+  animation-delay: 2s;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+}
+
+.dot:nth-child(3) {
+  background: #ffd700;
+  animation-delay: 4s;
+  box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+}
+
+@keyframes moveAround {
+  0%   { top: 0; left: 0; }
+  25%  { top: 0; left: 100%; transform: translateX(-100%); }
+  50%  { top: 100%; left: 100%; transform: translate(-100%, -100%); }
+  75%  { top: 100%; left: 0; transform: translateY(-100%); }
+  100% { top: 0; left: 0; }
+}
+
+p {
+  font-weight: bolder;
+  font-size: 40px;
+  z-index: 20;
+  position: relative;
+}
+
+button {
+  height: 70px;
+  width: 250px;
+  color: black;
+  border-radius: 10px;
+  font-size: larger;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #9EABA2, #BDD175, #EECC8C, #E8B298, #D3A29D, #A36361);
+  z-index: 20;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-top: 30px;
+  border: none;
+  position: relative;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+

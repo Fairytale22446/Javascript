@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    border: border-box;
+  }
+  body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0%;
+    flex-direction: column;
+   
+  }
+  .resumeDiv {
+    width: 55%;
+    border:2px solid black;
+    margin-top:20px;
+  }
+  header {
+    
+    height: 150px;
+   margin-bottom:15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(rgba(8, 138,0 ,1),rgba(32,141,214,0.562));
+  }
+  header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    
+  }
+  .content {
+    width: 100%;
+    display: flex;
+  }
+  aside{
+    padding-top:10px;
+  }
+  .content aside {
+    width: 30%;
+    background-color:#f0ffff ;
+    padding-left: 50px;
+    padding-bottom: 50px;
+  }
+  .contact h2,
+  .education h2,
+  .skills h2,
+  .language h2,
+.Achievements h2 ,
+  .reference h2{
+    border-bottom: 2px solid rgb(10, 89, 10) ;
+    margin-bottom: 20px;
+    color:rgb(10, 89, 10);
+  }
+  .contact,
+  .achievements,
+  .skills {
+    margin-bottom: 30px;
+  }
+  .education {
+    line-height: 22px;
+  }
+  .skills ul {
+    margin-left: 15px;
+  }
+  .content main {
+    width: 70%;
+    background-color: #ffffff;
+    padding-left: 50px;
+  }
+  .first p {
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+  .achievements ul {
+    margin-left: 18px;
+    margin-top: 15px;
+  }
+  .language ul{
+    margin-left: 15px;
+  }
+  .mainContent{
+    padding-top: 10px;
+  }
+  .first {
+    margin-bottom: 40px;
+  }
+  .white{
+      color:white;
+  }
+  
+  .btnDiv{
+      width:66.5%;
+      padding:2%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  
+      margin-top:30px;
+  }
+  .btn{
+      font-size: 20px;
+      font-weight: 600;
+      padding:10px 20px;
+      border-radius:8px;
+      color:white;
+      background-color: rgb(57, 145, 57);
+  
+      &:hover{
+          background: rgb(49, 129, 49);
+          
+      }
+      &:active{
+          transform: scale(0.95);
+      }
+  }
+  .hide{
+    display:none;
+  }
+  
+  
+  @media (max-width:700px){
+      .content , main{
+          flex-direction: column;
+      }
+   
+  }
