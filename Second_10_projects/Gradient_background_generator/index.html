@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aesthetic Gradient Generator • Glassmorphism</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="app">
+      <!-- Left: Preview -->
+      <section class="card">
+        <div class="title">
+          <span class="dot"></span> <span>Gradient Preview</span>
+        </div>
+        <div class="preview" style="margin-top: 12px">
+          <div id="gradientCanvas" class="canvas"></div>
+          <div class="preview-overlay"></div>
+        </div>
+        <div class="row" style="margin-top: 12px">
+          <span class="chip" id="chipInfo">linear • 135° • 3 colors</span>
+          <span class="tiny" id="contrastInfo"
+            >Tip: Click “Copy CSS” to grab this gradient.</span
+          >
+        </div>
+      </section>
+
+      <!-- Right: Controls -->
+      <section class="card controls">
+        <div class="title"><span class="dot"></span> <span>Controls</span></div>
+
+        <div class="row" style="margin-top: 10px">
+          <div class="field">
+            <label for="type">Type</label>
+            <select id="type">
+              <option value="linear" selected>Linear</option>
+              <option value="radial">Radial</option>
+            </select>
+          </div>
+          <div class="field" id="angleField">
+            <label for="angle"
+              >Angle: <strong id="angleValue">135°</strong></label
+            >
+            <input
+              id="angle"
+              type="range"
+              min="0"
+              max="360"
+              step="1"
+              value="135"
+            />
+          </div>
+          <div class="field">
+            <label for="stops">Colors</label>
+            <select id="stops">
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field" style="margin-top: 8px">
+          <label>Color Stops</label>
+          <div id="colorStops" class="colors"></div>
+        </div>
+
+        <div class="row" style="margin-top: 6px">
+          <button id="btnRandom" class="btn-ghost">Randomize Colors</button>
+          <button id="btnApply" class="btn-primary">Apply</button>
+          <button id="btnCopy" class="btn-ghost">Copy CSS</button>
+        </div>
+
+        <div class="field" style="margin-top: 10px">
+          <label for="cssOut">CSS Snippet</label>
+          <textarea id="cssOut" class="code" readonly></textarea>
+        </div>
+
+        <footer>
+          Built with ♥ using HTML, CSS & JS — Pastel Glassmorphism aesthetics.
+        </footer>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
